@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Quote - Turbo Tune Garage</title>
+  <link rel="stylesheet" href="../assets/css/getQuote.css">
+</head>
+<body>
+
+  <header>
+    <h1>Get a Quote</h1>
+  </header>
+
+  <main>
+    <section class="quote-form-section">
+      <h2>Request Your Quote</h2>
+      <form id="quoteForm" enctype="multipart/form-data">
+        
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="service">Service Required:</label>
+        <select id="service" name="service" required>
+          <option value="">-- Select --</option>
+          <option value="engine-repair">Engine Repair</option>
+          <option value="brake-repair">Brake Repair</option>
+          <option value="tire-repair">Tire Repair</option>
+          <option value="battery-repair">Battery Repair</option>
+          <option value="steering-repair">Steering Repair</option>
+        </select>
+
+        <label for="details">Additional Details:</label>
+        <textarea id="details" name="details" rows="4"></textarea>
+
+        <label for="image">Upload an Image (optional):</label>
+        <input type="file" id="image" name="image" accept="image/*">
+
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('quoteForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Just simulate submission (frontend only)
+      alert("Your quote request has been submitted!");
+      window.location.href = 'thankyou.html';
+    });
+  </script>
+
+</body>
+</html>
